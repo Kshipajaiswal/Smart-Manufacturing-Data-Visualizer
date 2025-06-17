@@ -2,3 +2,8 @@
 This project is a real-time quality control data visualization dashboard built using Python, Flask, JavaScript, HTML, and CSS. It collects and displays manufacturing data to help trace errors and present insights clearly to clients. The dashboard features dynamic charts, filters, and export options for streamlined analysis.
 
 ## Introduction
+In modern manufacturing settings, real-time data monitoring is essential for preserving quality and efficiency. Designed expressly for an electric vehicle battery manufacturing line, this project presents a Real Time Quality Control (QC) Visualization Tool. Using Python for backend processing and HTML, CSS, and JavaScript for the frontend interface, the system is built. 
+
+The tool lets users engineers, quality analysts, and clients visualize and analyze production data in real time or over custom time spans. It connects to a SQL Server database receiving constant input from a Programmable Logic Controller (PLC). Charts like SPC, X-bar, R, Histogram, and Normal Distribution allow users to track major performance indicators. 
+
+Other options include zone and station selection, a feedback form that updates the SQL server, PDF/Excel report creation, and an emergency stop button to improve safety. Making data more understandable and enabling teams to rapidly address quality concerns and production trends, the tool moves smart manufacturing ahead.
