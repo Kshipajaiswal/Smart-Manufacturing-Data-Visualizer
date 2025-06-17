@@ -14,3 +14,16 @@ Other options include zone and station selection, a feedback form that updates t
 3. Display Key Quality Control Charts: To generate SPC, X-bar, R, Histogram, and Normal Distribution charts for better insight into production quality.
 4. Generate Reports for Review: To export charts and data into PDF or Excel format for easy sharing and analysis.
 5. Collect Feedback from Engineers: To provide a form for real-time input from on-site engineers, updating the SQL database instantly.
+
+## Technologies Involved
+1. Python – Backend logic, data processing, and communication with the SQL Server.
+2. Flask – Web framework used to serve the application and handle routing.
+3. HTML/CSS – Structure and styling of the frontend interface.
+4. JavaScript – Frontend interactivity and dynamic chart rendering.
+5. Chart.js – For generating real-time statistical charts and visualizations.
+6. SQL Server – Database used to store and retrieve production data from the PLC.
+7. PLC (Programmable Logic Controller) – Source of real-time data from the assembly line.
+8. Pandas & NumPy – For data manipulation and analysis on the backend.
+9. PDF/Excel Libraries (e.g., ReportLab, openpyxl) – For exporting charts and tables into downloadable formats.
+
+    
