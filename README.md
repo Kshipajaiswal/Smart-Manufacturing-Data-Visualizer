@@ -7,3 +7,10 @@ In modern manufacturing settings, real-time data monitoring is essential for pre
 The tool lets users engineers, quality analysts, and clients visualize and analyze production data in real time or over custom time spans. It connects to a SQL Server database receiving constant input from a Programmable Logic Controller (PLC). Charts like SPC, X-bar, R, Histogram, and Normal Distribution allow users to track major performance indicators. 
 
 Other options include zone and station selection, a feedback form that updates the SQL server, PDF/Excel report creation, and an emergency stop button to improve safety. Making data more understandable and enabling teams to rapidly address quality concerns and production trends, the tool moves smart manufacturing ahead.
+
+## Objectives of the Project
+1. Enable Real-Time Monitoring: To visualize live data from the PLC via SQL Server for immediate tracking of assembly line performance.
+2. Allow Data Filtering by Time and Station: To help users analyze specific data ranges using date, time, zone, and station filters.
+3. Display Key Quality Control Charts: To generate SPC, X-bar, R, Histogram, and Normal Distribution charts for better insight into production quality.
+4. Generate Reports for Review: To export charts and data into PDF or Excel format for easy sharing and analysis.
+5. Collect Feedback from Engineers: To provide a form for real-time input from on-site engineers, updating the SQL database instantly.
