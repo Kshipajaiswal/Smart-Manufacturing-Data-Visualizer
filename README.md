@@ -7,7 +7,6 @@ This project is a real-time quality control data visualization dashboard built u
 - [Technologies Involved](technologies-involved)
 - [Objective of the Project](#objective-of-the-project)
 - [How to Test](#how-to-test)
-- [GUI Preview](#gui-preview)
 - [Future Scope](#future-scope)
 - [Contact](#contact)
 
