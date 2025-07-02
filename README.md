@@ -26,4 +26,22 @@ Other options include zone and station selection, a feedback form that updates t
 8. Pandas & NumPy – For data manipulation and analysis on the backend.
 9. PDF/Excel Libraries (e.g., ReportLab, openpyxl) – For exporting charts and tables into downloadable formats.
 
-## 
+## How to Use
+1. Launch the Flask app:  python app.py
+2. Open http://localhost:5000/ in your browser.
+3. Use the header dropdowns to filter by:
+* Zone
+* Station
+* Product Type
+* Date Range
+4. View charts:
+* SPC Chart
+* X-Bar Chart
+*R Chart
+*Histogram
+*Normal Distribution Chart
+5. Expand charts into full-screen views.
+6. Export results to PDF or Excel.
+7. Submit real-time feedback through the Engineer Form.
+
+
