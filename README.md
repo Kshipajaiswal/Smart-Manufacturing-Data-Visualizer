@@ -85,6 +85,28 @@ Expand any chart for detailed visualization with a single click.
 6. Export results to PDF or Excel.
 7. Submit real-time feedback through the Engineer Form.
 
+## Future Scope
+1. Machine Learning Integration
+   Use ML models to predict faults and flag anomalies in SPC data.
+
+2. Real-Time Alerts and Notifications
+   Send notifications when data crosses specified thresholds.
+
+3. Mobile-Optimized Interface
+   Adapt the dashboard for tablets and smartphones used on the shop floor.
+
+4. Multi-Facility Support
+   Extend visualization across multiple manufacturing lines or zones.
+
+5. Cloud Deployment with User Access Control
+   Host on a cloud platform with secure user login and permission levels.
+
+6. Long-Term Historical Trends
+   Enable multi-month/year analysis of KPIs and defect rates.
+
+7. QR/Barcode Integration
+   Scan products to instantly filter and load their corresponding data.
+
 ## Contact
 Kshipa Jaiswal
 1. Email: [kshipajaiswal@gmail.com]
