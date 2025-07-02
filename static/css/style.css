@@ -1,0 +1,346 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding: 8px;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h2 {
+  font-size: x-large;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+}
+
+h2{
+  font-size: x-large;
+  font-weight: bold;
+  font-style: normal;
+}
+
+#live-update-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  left: -10px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+#live-update-btn.live {
+  background-color: #e60023;
+  color: white;
+  position: relative;
+  left: -10px;
+  animation: pulse 1.2s infinite;
+}
+
+#live-update-btn.offline {
+  background-color: #888;
+  color: #f0f0f0;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(230, 0, 35, 0.6); }
+  50% { box-shadow: 0 0 12px rgba(230, 0, 35, 1); }
+  100% { box-shadow: 0 0 0px rgba(230, 0, 35, 0.6); }
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Sidebar style */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0; /* Sidebar opens from the right */
+  background-color:#f1f1f1;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 15px;
+  z-index: 1000;
+  margin-top: 93px;
+  margin-right: 10px;
+  border-radius: 12px;
+}
+
+/* Shift content when sidebar is open */
+.main-content {
+  transition: margin-right 0.4s;
+  padding: 0px 16px 0px 0px;
+}
+
+/* When sidebar is open */
+.sidebar-opened {
+  margin-right: 300px; /* Adjust width based on sidebar size */
+}
+
+.openbtn{
+  color: black;
+}
+
+h3{
+  margin-inline-start: 6px;
+  font-style: normal;
+  margin: 0% 0% 2% 2%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.filter{
+  margin: 0% 2% 0% 2%;
+  select,input{
+    width: 100%;
+  }
+}
+
+.export-buttons {
+  margin-top: 20px;
+}
+
+.export-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  font-weight: bold;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 3%;
+  width: 93%;
+}
+
+.export-buttons button:hover {
+  background-color: #7d78784f;
+}
+
+/* When active, show sidebar */
+.sidebar.active {
+  width: 250px;
+}
+
+/* Sidebar links */
+.sidebar a {
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Close button inside sidebar */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 36px;
+  color: white;
+}
+
+.left-section,
+.dropdowns,
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dropdowns select,
+.right-section input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Chart container styling */
+.chart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.chart-box {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.chart-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #db8758;
+}
+
+/* Expand icon */
+.expand-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+.expand-icon:hover {
+  transform: scale(1.2);
+  color: #004080;
+}
+
+/* Make canvas responsive */
+canvas {
+  width: 100% ;
+  height: 192px ;
+  
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  width:119vh;
+  background-color:#f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 200%;
+  max-width: 200%;
+  overflow: auto;
+  position: relative;
+}
+
+
+.left-panel {
+  float: left;
+  width: 200px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ccc;
+}
+
+.dataPreviewList {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background:#ff895c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.gpraphdata{
+  display:flex;
+}
+
+.datavalues {
+  height: 60vh;
+  overflow: scroll;
+}
+
+.popup-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 4px;
+  align-items: flex-start; /* Align to left */
+  gap: 2px; /* Optional: adds spacing between the items */
+}
+.popup-header select {
+  padding: 3px;
+  font-size: 14px;
+  align-items: left;
+  width: 115px;
+  margin-top: 3px;
+}
+
+.datavalues {
+  max-height: 388px;
+  overflow-y: auto;
+  padding: 15px;
+  margin-top: 5px;
+  font-family: monospace;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  white-space: nowrap;
+  width: 163px;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .left-section,
+  .dropdowns,
+  .right-section {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Battery Line Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div>
+    <h3>Filter Options: </h3> 
+  </div>
+
+  <div class="filter">
+    <label for="zone-select">Zone:</label>
+    <select id="zone-select" onchange="getChartData()">
+      <option value="">Select Zone</option>
+      <option value="zone1">Zone 1</option>
+      <option value="zone2">Zone 2</option>
+      <option value="zone3">Zone 3</option>
+      <option value="zone4">Zone 4</option>
+    </select>
+
+    <label for="station-select">Station:</label>
+    <select id="station-select" onchange="getChartData()">
+      <option value="">Select Station</option>
+      <option value="station1">Station 1</option>
+      <option value="station2">Station 2</option>
+    </select>
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" onchange="getChartData()" />
+
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" onchange="getChartData()" />
+
+    <div class="export-buttons">
+      <button onclick="exportToPDF()">Export to PDF</button>
+      <button onclick="exportToExcel()">Export to Excel</button>
+    </div>
+    
+  </div>
+
+</div>
+
+
+  <!-- Header -->
+  <div class="header">
+    <div class="left-section">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo" class="logo" />
+    </div>
+
+    <!-- Dynamic Title -->
+    <div class="header-title">
+      <h2 id="project-header">Project Data</h2>
+    </div>
+
+    <!-- Live Data Button -->
+    <button id="live-update-btn">Live Data 🔴</button>
+
+    <!-- Toggle on right -->
+    <span class="openbtn" onclick="toggleSidebar()">☰</span>
+
+    </div>
+  </div>
+
+  <div id="main-content" class="main-content">
+    
+    <!-- Charts -->
+    <div class="chart-container">
+      <div class="chart-box" id="spc_Chart">
+        <h2>SPC Chart</h2>
+        <canvas id="spcChart"></canvas>
+        <span class="expand-icon" onclick="maximize('spcChart')">&#x2197;</span>
+      </div>
+      <div class="chart-box" id="x_Chart">
+        <h2>X Chart</h2>
+        <canvas id="xChart"></canvas>
+        <span class="expand-icon" onclick="maximize('xChart')">&#x2197;</span>
+      </div>
+      <div class="chart-box" id="r_Chart">
+        <h2>R Chart</h2>
+        <canvas id="rChart"></canvas>
+        <span class="expand-icon" onclick="maximize('rChart')">&#x2197;</span>
+      </div>
+      <div class="chart-box" id="histogram_chart">
+        <h2>Histogram</h2>
+        <canvas id="histogram"></canvas>
+        <span class="expand-icon" onclick="maximize('histogram')">&#x2197;</span>
+      </div>
+      <div class="chart-box" id="normal_Chart">
+        <h2>Normal Distribution</h2>
+        <canvas id="normalChart"></canvas>
+        <span class="expand-icon" onclick="maximize('normalChart')">&#x2197;</span>
+      </div>
+    </div>
+
+    <!-- Popup for Expanded Chart -->
+    <div id="popupContainer" class="popup-container" style="display: none;">
+      <div class="popup-content">
+        <div class="popup-header">
+          <!-- Data Count Filter on the Left -->
+          <label for="dataCountInput">Data Points:</label>
+          <input
+            type="number"
+            id="dataCountInput"
+            min="1"
+            placeholder="50"
+            onchange="filterPopupData()" />
+
+          <!-- Close Button on the Right -->
+          <button class="close-btn" onclick="closePopup()">×</button>
+        </div>
+        <div class="gpraphdata">
+          
+        
+        <div class="datavalues"></div>
+        
+        <canvas id="popupChartCanvas" width="800" height="500"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+  
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+</body>
+</html>
