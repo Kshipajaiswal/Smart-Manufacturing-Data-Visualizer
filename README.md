@@ -46,9 +46,9 @@ Other options include zone and station selection, a feedback form that updates t
 
 ## Contact
 Kshipa Jaiswal
-📧 Email: [kshipajaiswal@gmail.com]
-🔗 LinkedIn: www.linkedin.com/in/kshipa-jaiswal-ab7055220
-📂 GitHub: [github.com/your-username](https://github.com/Kshipajaiswal)
+1. Email: [kshipajaiswal@gmail.com]
+2. LinkedIn: www.linkedin.com/in/kshipa-jaiswal-ab7055220
+3. GitHub: [github.com/your-username](https://github.com/Kshipajaiswal)
 
 
 
